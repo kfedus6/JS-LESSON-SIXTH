@@ -1,4 +1,5 @@
 //============== ДЗ ============\\
+/*
 class MacBookPro {
    #price;
    constructor(inches = 'default', processor = 'M1Pro', memory = '16GB', storage = '1TB-SSD', price = 0) {
@@ -88,3 +89,5 @@ myNewMacBookPro.setProcessor();
 myNewMacBookPro.setMemory();
 myNewMacBookPro.setStorage();
 document.write(myNewMacBookPro.getMacBookInfo());
+*/
+
