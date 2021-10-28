@@ -1,26 +1,27 @@
 //============== ДЗ ============\\
 class MacBookPro {
+   #price;
    constructor(inches = 'default', processor = 'M1Pro', memory = '16GB', storage = '1TB-SSD', price = 0) {
       this.inches = inches;
       this.processor = processor;
       this.memory = memory;
       this.storage = storage;
-      this.price = price;
+      this.#price = price;
    }
    getMacBookInfo() {
-      return `Inches: ${this.inches},<br>Procesor: ${this.processor},<br>Memory: ${this.memory},<br>Storage: ${this.storage},<br>Цина: ${this.price} $`;
+      return `Inches: ${this.inches},<br>Procesor: ${this.processor},<br>Memory: ${this.memory},<br>Storage: ${this.storage},<br>Цина: ${this.#price} $`;
    }
    getInches() {
       menu = +prompt('Диагональ екрана:\n1 - 14inch - 2000$\n2 - 16inch - 2500$');
       switch (menu) {
          case 1: {
             this.inches = '14-inch';
-            this.price = 2000;
+            this.#price = 2000;
             break;
          }
          case 2: {
             this.inches = '16-inch';
-            this.price = 2500;
+            this.#price = 2500;
             break;
          }
       }
@@ -30,7 +31,7 @@ class MacBookPro {
       switch (menu) {
          case 1: {
             this.processor = 'M1Max';
-            this.price += 700;
+            this.#price += 700;
             break;
          }
          case 2: {
@@ -43,12 +44,12 @@ class MacBookPro {
       switch (menu) {
          case 1: {
             this.memory = '32GB';
-            this.price += 200;
+            this.#price += 200;
             break;
          }
          case 2: {
             this.memory = '64GB';
-            this.price += 400;
+            this.#price += 400;
             break;
          }
          case 3: {
@@ -61,17 +62,17 @@ class MacBookPro {
       switch (menu) {
          case 1: {
             this.storage = '2TB-SSD';
-            this.price += 400;
+            this.#price += 400;
             break;
          }
          case 2: {
             this.storage = '4TB-SSD';
-            this.price += 800;
+            this.#price += 800;
             break;
          }
          case 3: {
             this.storage = '8TB-SSD';
-            this.price += 1200;
+            this.#price += 1200;
             break;
          }
          case 4: {
