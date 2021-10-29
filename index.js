@@ -91,3 +91,165 @@ myNewMacBookPro.setStorage();
 document.write(myNewMacBookPro.getMacBookInfo());
 */
 
+/*
+function Human(name, age, eyes) {
+   this.name = name;
+   this.age = age;
+   this.eyes = eyes;
+   this.go = function () {
+      console.log(this.name + "start go");
+   }
+   this.work = function () {
+      console.log(this.name + " worked")
+   }
+   this.learn = function () {
+      console.log(this.name + " learn")
+   }
+}
+function Student(name, age, univer) {
+   Human.call(this, name, age, eyes = 3);
+   this.univer = univer;
+   this.work = function () {
+      console.log("error" + this.name + " learn")
+   }
+}
+function Employee(name, age, work) {
+   Human.call(this, name, age, work);
+   this.work = work;
+}
+let anton = new Human("anton", 12);
+let kiril_student = new Student("kirill", 16, "Metal");
+console.log(anton);
+console.log(kiril_student);
+anton.go();
+kiril_student.work();
+*/
+
+
+
+
+
+
+
+/*
+class Animal {
+   constructor(name, age) {
+      this.age = age;
+      this.name = name;
+   }
+   go() {
+      console.log("Данное животное может")
+   }
+}
+
+class Dog extends Animal {
+   constructor(name, age, poroda) {
+      super(name, age);
+      this.poroda = poroda;
+   }
+   print() {
+      console.log(this.name, "имеет породу", this.poroda, "возраст", this.age)
+   }
+   go() {
+      super.go();
+      console.log("Бегать")
+   }
+}
+
+class Popugai extends Animal {
+   constructor(name, age, country) {
+      super(name, age);
+      this.country = country
+   }
+   go() {
+      super.go();
+      console.log("Летать")
+   }
+}
+
+const sharik = new Dog("sharil", 11, "alabai");
+sharik.print()
+sharik.go();
+
+const besilka = new Popugai("besilka", 3, "Австралия");
+besilka.go()
+*/
+
+/*
+class Person {
+   #name;
+   #age;
+   constructor(name, age) {
+      this.#name = name;
+      this.#age = age;
+   }
+   getName() {
+      return this.#name;
+   }
+   print() {
+      console.log(this.#name, this.#age);
+   }
+}
+
+class Employee extends Person {
+   constructor(name, age, company) {
+      super(name, age);
+      this.company = company;
+   }
+   work() {
+      console.log(`${this.getName()} работает ${this.company}`);
+   }
+   print() {
+      super.print();
+      console.log(this.company);
+   }
+}
+
+const a = new Employee("kolya", 22, "google");
+a.work();
+a.print();
+a.getName();
+*/
+
+//МАССИВАМ
+/*
+let names = ['kolya', 'timur', 'olya'];
+names = new Array('kolya', 'timur', 'olya')
+names = Array.of('kolya', 'timur', 'olya')
+
+let tmp = Array.from("hellomyworld");
+console.log(tmp);
+
+x = [1, 2, 3, 4];
+let num = Array.from(x, (n) => n * 2);
+console.log(num);
+
+let arr = Array.from({ length: 3, }, (element, idx) => {
+   return idx;
+})
+
+console.log(arr);
+
+
+arr = Array.from({ length: 3, "0": "Timur", "1": "Sasha", "2": "dima" }, (element, idx) => {
+   console.log(element)
+   console.log(idx);
+   return element;
+})
+
+console.log(arr);
+console.log(tmp);
+let newArr = [...arr, 'alex', ...tmp];
+console.log(newArr);
+
+function sum(x1, x2, x3, x4, x5) {
+   console.log(x1 + x2 + x3 + x4 + x5);
+}
+
+let s = [1, 5, 3, 2, 6];
+let t = Array.of(...s)
+t[2] = 55;
+console.log(s);
+console.log(t);
+
+*/
