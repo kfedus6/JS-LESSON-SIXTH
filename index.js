@@ -245,7 +245,7 @@ console.log(s);
 console.log(t);
 */
 //============== ДЗ ==============\\
-
+/*
 class Person {
    constructor(name, year, job) {
       this.name = name;
@@ -415,3 +415,104 @@ while (!exite) {
    }
 }
 
+*/
+
+/*
+let arr = []
+
+arr.push("qwe");
+arr.push(1);
+arr.push(false);
+
+arr.pop();
+
+console.log(arr);
+*/
+
+/*
+let arr = [];
+for (let i = 1; i <= 10; i++) {
+   arr.push(i);
+}
+
+let ch = []
+let nch = []
+while (arr.length != 0) {
+   if (arr[arr.length - 1] % 2 == 0) {
+      ch.push(arr.pop());
+   } else {
+      nch.push(arr.pop());
+   }
+}
+
+console.log(ch);
+console.log(nch);
+*/
+
+/*
+let arr = [80, 74]
+arr.unshift(1, 5, 2);
+console.log(arr);
+arr.shift();
+console.log(arr);
+*/
+
+/*
+let arr = [];
+for (let i = 1; i <= 10; i++) {
+   arr.unshift(i);
+}
+
+let ch = []
+let nch = []
+
+while (arr.length != 0) {
+   if (arr[0] % 2 === 0) {
+      ch.unshift(arr.shift());
+   } else {
+      nch.unshift(arr.shift());
+   }
+}
+
+console.log(ch);
+console.log(nch);
+*/
+
+/*
+let texts = ["I", "Love", "JS", ";)"];
+texts.splice(1, 1, "hate", "php");
+console.log(texts);
+*/
+
+/*
+let texts = ["anton", "egor", "anya", "slavik"];
+
+
+for (let i = 0; i < texts.length; i++) {
+   if (texts[i][0] == "a") {
+      if (i == 0) {
+         texts.splice(i, i + 1);
+      }
+      else {
+         texts.splice(i, i);
+      }
+   }
+}
+console.log(texts);
+*/
+
+/*
+let texts = ["love", "js", "forever"];
+for (let i = 0; i < texts.length; i++) {
+   if (texts[i] === "love") {
+      if (i === 0) {
+         texts.splice(i, i + 1, "hate");
+      }
+      else {
+         texts.splice(i, i, "hate");
+      }
+   }
+}
+
+console.log(texts);
+*/
