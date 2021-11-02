@@ -245,76 +245,36 @@ console.log(s);
 console.log(t);
 */
 //============== ДЗ ==============\\
-/*
+
 class Person {
-   constructor(name, age, job) {
+   constructor(name, year, job) {
       this.name = name;
-      this.age = age;
+      this.year = year;
       this.job = job;
    }
    print() {
-      console.log(`Имя: ${this.name}, Возраст: ${this.age}, Робота: ${this.job}`);
+      console.log(`Имя: ${this.name}, Возраст: ${this.getFullYear()}, Робота: ${this.job}`);
+   }
+   getFullYear() {
+      return new Date().getFullYear() - this.year;
    }
 }
 
 class Librarian extends Person {
-   constructor(name, age, job) {
-      super(name, age, job);
+   constructor(name, year, job) {
+      super(name, year, job);
    }
 }
 
-let librarian = new Librarian("Наталя Петривна", 48, "Библиотекар");
+let librarian = new Librarian("Наталя Петривна", 1975, "Библиотекар");
 
-class Author {
-   constructor(name, age, country) {
-      this.name = name;
-      this.age = age;
+class Author extends Person {
+   constructor(name, year, country) {
+      super(name, year);
       this.country = country;
    }
    print() {
-      console.log(`Имя: ${this.name}, Возраст: ${this.age}, Страна: ${this.country}`);
-   }
-   setName(name) {
-      if (name === '') {
-         return this.name;
-      } else {
-         this.name = name;
-      }
-   }
-   setAge(age) {
-      if (age === '') {
-         return this.age;
-      } else {
-         this.age = age;
-      }
-   }
-   setCountry(country) {
-      if (country === '') {
-         return this.country;
-      } else {
-         this.country = country;
-      }
-   }
-}
-
-let author = [];
-
-class Book {
-   constructor(author, name, year, pages) {
-      this.author = author;
-      this.name = name;
-      this.year = year;
-      this.pages = pages;
-   }
-   print() {
-      console.log(`Автор: ${this.author}, Название: ${this.name}, Год: ${this.year}, Сторинок: ${this.pages}`)
-   }
-   setAuthor(author) {
-      if (author === '') {
-         return this.author;
-      } else {
-         this.author = author;
-      }
+      console.log(`Имя: ${this.name}, Возраст: ${this.getFullYear()}, Страна: ${this.country}`);
    }
    setName(name) {
       if (name === '') {
@@ -328,6 +288,33 @@ class Book {
          return this.year;
       } else {
          this.year = year;
+      }
+   }
+   setCountry(country) {
+      if (country === '') {
+         return this.country;
+      } else {
+         this.country = country;
+      }
+   }
+}
+
+let author = [];
+
+class Book extends Author {
+   constructor(name, title, year, pages) {
+      super(name, year)
+      this.title = title;
+      this.pages = pages;
+   }
+   print() {
+      console.log(`Автор: ${this.name}, Название: ${this.title}, Год: ${this.year}, Сторинок: ${this.pages}`)
+   }
+   setTitle(title) {
+      if (title === '') {
+         return this.title;
+      } else {
+         this.title = title;
       }
    }
    setPages(pages) {
@@ -358,25 +345,30 @@ while (!exite) {
    menu = +prompt();
    switch (menu) {
       case 1:
-         author[author.length] = new Author(prompt("Имя"), prompt("Возраст"), prompt("Страна"));
+         console.log(1);
+         author[author.length] = new Author(prompt("Имя"), prompt("Год рождения"), prompt("Страна"));
          break;
       case 2:
+         console.log(2);
          book[book.length] = new Book(prompt("Автор"), prompt("Название"), prompt("Год"), prompt("Сторинок"));
          break;
       case 3:
+         console.log(3);
          for (item of book) {
             item.print();
          }
          break;
       case 4:
-         author = prompt("Автор");
+         console.log(4)
+         name = prompt("Автор");
          for (item of book) {
-            if (item.author === author) {
+            if (item.name === name) {
                item.print();
             }
          }
          break;
       case 5:
+         console.log(5);
          year = prompt("Год книги");
          for (item of book) {
             if (item.year === year) {
@@ -385,27 +377,30 @@ while (!exite) {
          }
          break;
       case 6:
-         name = prompt("название книги");
+         console.log(6);
+         title = prompt("название книги");
          for (item of book) {
-            if (item.name === name) {
-               item.setAuthor(prompt("новый автор"));
-               item.setName(prompt("новое название"));
+            if (item.title === title) {
+               item.setName(prompt("новый автор"));
+               item.setTitle(prompt("новое название"));
                item.setYear(prompt("новый год"));
                item.setPages(prompt("новые страницы"));
             }
          }
          break;
       case 7:
+         console.log(7);
          name = prompt("какова автора хотите изменить");
          for (item of author) {
             if (item.name === name) {
                item.setName(prompt("нове имя"));
-               item.setAge(prompt("новый возраст"));
+               item.setYear(prompt("новый год"));
                item.setCountry(prompt("новая страна"));
             }
          }
          break;
       case 8:
+         console.log(8);
          librarian.print();
          console.log(`Книг: ${book.length}`);
          for (item of author) {
@@ -419,5 +414,4 @@ while (!exite) {
          break;
    }
 }
-*/
 
