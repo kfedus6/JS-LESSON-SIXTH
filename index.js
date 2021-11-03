@@ -516,3 +516,43 @@ for (let i = 0; i < texts.length; i++) {
 
 console.log(texts);
 */
+
+//=============== ДЗ =====================\\
+//1)
+/*
+let arr = [];
+for (let i = 1; i <= 10; i++) {
+   arr.unshift(i);
+}
+
+let number = (word, num) => {
+   let ch = [];
+   let nch = [];
+   if (word === "четные") {
+      for (let i = 1; i <= 10; i++) {
+         if (num[0] % 2 == 0) {
+            ch.unshift(num.shift());
+         } else {
+            nch.unshift(num.shift());
+         }
+      }
+      for (item of ch) {
+         console.log(item);
+      }
+   }
+   else if (word === "нечетные") {
+      for (let i = 1; i <= 10; i++) {
+         if (num[0] % 2 == 0) {
+            ch.unshift(num.shift());
+         } else {
+            nch.unshift(num.shift());
+         }
+      }
+      for (item of nch) {
+         console.log(item);
+      }
+   }
+}
+number("нечетные", arr);
+*/
+//2)
