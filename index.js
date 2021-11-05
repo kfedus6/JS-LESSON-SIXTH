@@ -556,3 +556,34 @@ let number = (word, num) => {
 number("нечетные", arr);
 */
 //2)
+/*
+class Person {
+   constructor(name, age, year) {
+      this.name = name;
+      this.age = age;
+      this.year = year;
+   }
+   print() {
+      console.log(`Имя: ${this.name}, Возраст: ${this.age}, Год раджения: ${this.year}`);
+   }
+}
+
+let user = [];
+for (let i = 0; i < 1; i++) {
+   user[i] = new Person(prompt("name"), prompt("age"), prompt("year"));
+}
+for (item of user) {
+   item.print;
+}
+
+for (key of user) {
+   if (key.age <= 18) {
+      key.name = "delete";
+      key.age = "delete";
+      key.year = "delete";
+      key.print();
+   } else {
+      key.print();
+   }
+}
+*/
