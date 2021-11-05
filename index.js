@@ -556,6 +556,7 @@ let number = (word, num) => {
 number("нечетные", arr);
 */
 //2)
+
 /*
 class Person {
    constructor(name, age, year) {
@@ -569,21 +570,104 @@ class Person {
 }
 
 let user = [];
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < 2; i++) {
    user[i] = new Person(prompt("name"), prompt("age"), prompt("year"));
 }
 for (item of user) {
    item.print;
 }
 
-for (key of user) {
-   if (key.age <= 18) {
-      key.name = "delete";
-      key.age = "delete";
-      key.year = "delete";
-      key.print();
-   } else {
-      key.print();
+for (let i = 0; i < user.length; i++) {
+   if (user[i].age < 18) {
+      user.splice(i, i, "delete")
    }
 }
+
+for (key of user) {
+   console.log(key)
+}
+*/
+
+/*
+let texts = ["hello", "my", "best", "world"];
+let newTexts = texts.slice(1)
+console.log(newTexts)
+*/
+
+/*
+let arr = Array.from(prompt());
+let newArr = arr.slice(-3)
+console.log(newArr);
+*/
+
+/*
+let n1 = [1, 2, 3];
+let n2 = [4, 5, 6];
+let sum = []
+sum = sum.concat(n1, n2);
+console.log(sum);
+*/
+
+/*
+hello =  lohel
+qwer = erqw
+*/
+
+/*
+let word = Array.from(prompt());
+len = word.length;
+one = word.slice(len / 2);
+console.log(one)
+two = word.splice(0, len / 2);
+console.log(two)
+res = [];
+res = res.concat(one, two)
+console.log(res);
+*/
+
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+arr.forEach(function (item, index) {
+   console.log(`item ${item} имеет индекс ${index}`)
+})
+*/
+
+/*
+let res = [];
+let names = ["anton", "egor", "anya", "timur"];
+names.forEach((item, index) => {
+   if (item[0] != "a") {
+      res.push(item);
+      names.splice(index, index);
+   }
+})
+*/
+
+//console.log(res);
+//console.log(names)
+//console.log(res) // egor,timur
+
+
+//Достать все числа больше 5 и записать в новый список. и удалить все числа меньше 3
+/*
+let sum = [];
+let num = [1, 2, 3, 4, 5, 6, 7, 8];
+
+num.forEach((item, index) => {
+   if (item > 5) {
+      sum.push(item);
+   }
+})
+
+num.forEach((item, idx) => {
+   if (item < 3 || item > 5) {
+      if (idx == 1) {
+         num.splice(idx - 1, idx)
+      }
+      num.splice(idx, idx)
+   }
+})
+console.log(sum); //6,7,8
+console.log(num); //3,4,5
 */
